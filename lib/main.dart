@@ -1,14 +1,12 @@
-// ignore: avoid_web_libraries_in_flutter
-
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:translator_app/home.dart';
+import 'package:splash_screen_view/SplashScreenView.dart';
+import 'package:translator_app/about.dart';
+
+import 'package:translator_app/btmbar.dart';
 
 void main() {
-runApp(MyApp());
-
-  }
+  runApp(const MyApp());
+}
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -21,11 +19,15 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-            // appBar: AppBar(
-            //   title: Center(child: const Text("Google Translator App")),
-            // ),
-            body: MyHomePage()));
+      debugShowCheckedModeBanner: false,
+      home: SplashScreenView(
+        speed: 0,
+        duration: 7000,
+        navigateRoute: const BtmMainpage(),
+        imageSize: 500,
+        imageSrc: "assets/splashh.gif",
+        backgroundColor: const Color(0xffffffff),
+      ),
+    );
   }
 }

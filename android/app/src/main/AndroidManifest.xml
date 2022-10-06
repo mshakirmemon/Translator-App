@@ -1,8 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.translator_app">
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
    <application
-        android:label="translator_app"
-        android:name="${applicationName}"
+        android:label="Translator App"
+        android:name="${applicationName}" 
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
